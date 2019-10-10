@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<operator xmlns="http://wirecloud.conwet.fi.upm.es/ns/macdescription/1" vendor="FISUDA" name="remove-null" version="0.1.0">
+
+    <details>
+        <title>remove null operator</title>
+        <authors>Kazuhito Suda &lt;wirecloud@fisuda.jp&gt;</authors>
+        <email>wirecloud@fisuda.jp</email>
+        <smartphoneimage></smartphoneimage>
+        <description>remove null operator</description>
+        <longdescription>DESCRIPTION.md</longdescription>
+        <changelog>doc/changelog.md</changelog>
+        <doc>doc/userguide.md</doc>
+        <license>MIT</license>
+        <issuetracker></issuetracker>
+    </details>
+
+    <requirements>
+        <!-- Add any extra requirements here -->
+        <!-- <feature name="${feature-name}" /> -->
+    </requirements>
+
+    <preferences>
+    </preferences>
+
+    <wiring>
+      <outputendpoint name="output" type="text" label="output" description="output data" />
+      <inputendpoint name="input" type="text" label="input" description="input data" />
+
+    </wiring>
+
+    <scripts>
+        <script src="js/main.js"/>
+    </scripts>
+
+</operator>
