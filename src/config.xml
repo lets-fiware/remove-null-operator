@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<operator xmlns="http://wirecloud.conwet.fi.upm.es/ns/macdescription/1" vendor="FISUDA" name="remove-null" version="0.1.0">
+<operator xmlns="http://wirecloud.conwet.fi.upm.es/ns/macdescription/1" vendor="FISUDA" name="remove-null" version="0.1.1">
 
     <details>
         <title>remove null operator</title>
@@ -20,12 +20,17 @@
     </requirements>
 
     <preferences>
+        <preference name="mode" label="mode" description="mode" type="list" default="remove">
+          <option label="Remove null" value="remove"/>
+          <option label="Replace with empty list" value="list"/>
+          <option label="Replace with empty object" value="object"/>
+          <option label="Pass through" value="pass"/>
+        </preference>
     </preferences>
 
     <wiring>
       <outputendpoint name="output" type="text" label="output" description="output data" />
       <inputendpoint name="input" type="text" label="input" description="input data" />
-
     </wiring>
 
     <scripts>
