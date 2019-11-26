@@ -1,5 +1,10 @@
 # remove null operator operator
 
+[![](https://nexus.lab.fiware.org/repository/raw/public/badges/chapters/visualization.svg)](https://www.fiware.org/developers/catalogue/)
+[![License: MIT](https://img.shields.io/github/license/lets-fiware/remove-null-operator.svg)](https://opensource.org/licenses/MIT)<br/>
+[![Build Status](https://travis-ci.org/lets-fiware/remove-null-operator.svg?branch=master)](https://travis-ci.org/lets-fiware/remove-null-operator)
+[![Coverage Status](https://coveralls.io/repos/github/lets-fiware/remove-null-operator/badge.svg)](https://coveralls.io/github/lets-fiware/remove-null-operator)
+
 The remove null operator operator is a WireCloud operator that provides ...
 
 ## Build dependencies
