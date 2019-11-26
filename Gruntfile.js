@@ -120,9 +120,6 @@ module.exports = function (grunt) {
                     'src/js/*.js',
                     'tests/js/*Spec.js'
                 ],
-                exclude: [
-                    'src/js/main.js',
-                ],
                 frameworks: ['jasmine'],
                 reporters: ['progress', 'coverage'],
                 browsers: ['Chrome', 'Firefox'],

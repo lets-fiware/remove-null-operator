@@ -10,13 +10,15 @@
 
     "use strict";
 
-    var mode = MashupPlatform.prefs.get('mode');
+    var pushEvent = function pushEvent(data) {
+        if (MashupPlatform.operator.outputs.output.connected) {
+            MashupPlatform.wiring.pushEvent("output", data);
+        }
+    }
 
-    MashupPlatform.prefs.registerCallback(function (new_preferences) {
-        mode = MashupPlatform.prefs.get('mode');
-    }.bind(this));
+    var removeNull = function removeNull(data) {
+        var mode = MashupPlatform.prefs.get('mode');
 
-    MashupPlatform.wiring.registerCallback('input', function (data) {
         if (data == null) {
             switch (mode) {
             case 'list':
@@ -29,8 +31,19 @@
         }
 
         if (data !== null || mode == 'pass') {
-            MashupPlatform.wiring.pushEvent("output", data);
+            pushEvent(data);
         }
-    });
+    }
+
+    /* TODO
+     * this if is required for testing, but we have to search a cleaner way
+     */
+    if (window.MashupPlatform != null) {
+        MashupPlatform.wiring.registerCallback("input", removeNull);
+    }
+
+    /* test-code */
+    window.removeNull = removeNull;
+    /* end-test-code */
 
 })();
