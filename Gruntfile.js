@@ -2,7 +2,7 @@
  * remove null
  *
  *
- * Copyright (c) 2019 Kazuhito Suda
+ * Copyright (c) 2019-2024 Kazuhito Suda
  * Licensed under the MIT license.
  */
 
